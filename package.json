@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/lch524/golu/issues"
   },
-  "homepage": "https://github.com/lch524/golu#readme"
+  "homepage": "https://github.com/lch524/golu#readme",
+  "dependencies": {
+    "vue": "^2.6.11"
+  }
 }
