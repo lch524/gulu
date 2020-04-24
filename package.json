@@ -1,0 +1,23 @@
+{
+  "name": "gulo",
+  "version": "0.0.1",
+  "description": "\u001b[3~\u001b[A\u001b[A\u001b[B\u001b[B\u001b[B\u001b[C\u001b[C这是一个\u001b[D\u001b[D\u001b[D\u001b[D\u001b[2~\u001b[2\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b这是一个UI框架",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lch524/golu.git"
+  },
+  "keywords": [
+    "Vue",
+    "UI"
+  ],
+  "author": "fly",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lch524/golu/issues"
+  },
+  "homepage": "https://github.com/lch524/golu#readme"
+}
