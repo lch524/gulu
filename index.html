@@ -10,7 +10,8 @@
       padding: 0;
       box-sizing: border-box;
     }
-    :root {/*:root代表作用域，在这里可以改成html和.g-button*/
+
+    :root { /*:root代表作用域，在这里可以改成html和.g-button*/
       --button-height: 32px;
       --font-size: 14px;
       --button-bg: white;
@@ -18,7 +19,7 @@
       --button-raduis: 4px;
       --color: #999;
       --border-color: #999;
-      --border-color-hover: #666; 
+      --border-color-hover: #666;
     }
 
     #app {
@@ -30,16 +31,21 @@
     }
   </style>
 
-  <style>
-
-  </style>
 </head>
 <body>
-  
-<div id="app">
-  <g-button></g-button>
-</div>
 
-  <script src = './src/app.js'></script>
+<div id="app">
+  <g-button :loading="loading1" @click="loading1 = !loading1">
+    按钮
+  </g-button>
+  <g-button icon="settings" :loading="loading2" @click="loading2 = !loading2">
+   按钮
+  </g-button>
+  <g-button icon="settings" icon-position="right" :loading="loading3" @click="loading3 = !loading3">
+    按钮
+  </g-button>
+</div>
+  <script   src = './src/app.js'></script>
+  <script src="//at.alicdn.com/t/font_1783661_ko27bf2aq7.js"></script>
 </body>
 </html>
