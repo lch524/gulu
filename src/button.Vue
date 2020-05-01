@@ -1,5 +1,5 @@
 <template>
-    <button clas ="g-button" >
+    <button class ="g-button">
         <div class="main" :class="{[`icon-${iconPosition}`]: true}" @click="$emit('click')">
             <g-icon class="icon" v-if="icon && !loading" :name='icon'></g-icon>
             <g-icon class="loading icon" v-if="loading" name="loading"></g-icon>
@@ -7,7 +7,6 @@
                 <slot/>
             </div>
         </div>
-
     </button>
 </template>
 <script>
@@ -32,7 +31,7 @@
         }
     }
 </script>
-<style lang="less">
+<style lang="scss">
     @keyframes spin {
         0%{transform: rotate(0deg);}
         100%{transform: rotate(360deg);}
@@ -41,13 +40,15 @@
         font-size: var(--font-size);
         height: var(--button-height);
         padding: 0 1em;/*不是width制作按钮两边的空白而是使用padding留出空白*/
-        border-radius: var(--button-raduis);
         border: 1px solid var(--border-color);
+        border-radius: var(--border-raduis);
         background: var(--button-bg);
-        display:inline-flex;
-        justify-content: center;
-        align-content: center;
+    }
+    .main{
+        display: inline-flex;
         vertical-align: middle;
+        align-items: center;
+        justify-content:center;
         &:hover {
             border-color: var(--border-color-hover);//&代表当前选择器选中的元素
         }
@@ -57,12 +58,6 @@
         &:focus {
             outline: none;
         }
-    }
-    .main{
-        display: inline-flex;
-        vertical-align: middle;
-        align-items: center;
-        justify-content:center;
     }
     .content{
         order: 2;

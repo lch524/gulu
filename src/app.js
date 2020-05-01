@@ -1,9 +1,11 @@
 import Vue from 'vue'
 import Button from './button'//引入
 import Icon from './icon'
+import ButtonGroup from './button-group'
 
 Vue.component('g-button',Button)
 Vue.component('g-icon',Icon)//映射
+Vue.component('g-button-group',ButtonGroup)
 
 new Vue({
     el:"#app",
