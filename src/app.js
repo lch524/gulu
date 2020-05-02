@@ -18,7 +18,7 @@ new Vue({
 
 import chai from 'chai'
 import spies from 'chai-spies'
-cahi.use(spies)
+chai.use(spies)
 //引入chai
 const expect = chai.expect
 
@@ -97,8 +97,10 @@ const expect = chai.expect
     })
     vm.$mount()
     let spy = chai.spy(function(){})
+
     vm.$on('click',spy)
-    let button = vm.$el
-    button.click();
-    expect(spy).to.have.been.called()
+    console.log(vm.$el);
+    let button = vm.$el.querySelector('div')
+    button.click()
+    !expect(spy).to.have.been.called()//希望该间谍函数被调用
 }//事件测试
