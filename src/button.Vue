@@ -1,6 +1,6 @@
 <template>
-    <button class ="g-button">
-        <div class="main" :class="{[`icon-${iconPosition}`]: true}" @click="$emit('click')">
+    <button class ="g-button" @click="$emit('click')">
+        <div class="main" :class="{[`icon-${iconPosition}`]: true}" >
             <g-icon class="icon" v-if="icon && !loading" :name='icon'></g-icon>
             <g-icon class="loading icon" v-if="loading" name="loading"></g-icon>
             <div class="content">
@@ -10,7 +10,13 @@
     </button>
 </template>
 <script>
+    import Vue from 'vue'
+    import Icon from './icon'
+    Vue.component('g-icon',Icon)
     export default{
+        components: {
+            'g-icon': Icon  //声明g-icon是上面所引入的icon.vue
+        },
         props: {
             icon: {},
             loading: {
