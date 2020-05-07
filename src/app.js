@@ -100,7 +100,6 @@ try {
         let spy = chai.spy(function () {})
 
         vm.$on('click', spy)
-        console.log(vm.$el);
         let button = vm.$el
         button.click()
         expect(spy).to.have.been.called()//希望该间谍函数被调用
