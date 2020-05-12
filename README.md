@@ -38,10 +38,6 @@ IE 15及以上浏览器都支持该样式
     'g-icon': Icon
     }
     ```
-4. 引入 svg symbols
-```
-  <script src="//at.alicdn.com/t/font_1783661_ko27bf2aq7.js"></script>
-```
 ## 文档
 
 ## 提问

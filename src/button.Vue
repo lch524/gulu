@@ -1,6 +1,6 @@
 <template>
     <button class ="g-button fly" @click="$emit('click')">
-        <div class="main fly" :class="{[`icon-${iconPosition}`]: true}" >
+        <div class="main" :class="{[`icon-${iconPosition}`]: true}" >
             <g-icon class="icon" v-if="icon && !loading" :name='icon'></g-icon>
             <g-icon class="loading icon" v-if="loading" name="loading"></g-icon>
             <div class="content">
@@ -14,6 +14,7 @@
     import Icon from './icon'
     Vue.component('g-icon',Icon)
     export default{
+        name: 'GuluButton',
         components: {
             'g-icon': Icon  //声明g-icon是上面所引入的icon.vue
         },
@@ -37,7 +38,7 @@
         }
     }
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
     @keyframes spin {
         0%{transform: rotate(0deg);}
         100%{transform: rotate(360deg);}
