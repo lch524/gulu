@@ -40,16 +40,19 @@
 <body>
 
 <div id="app">
+
   <div class="box">
-    <g-input value="张三"></g-input>
-    <g-input value="李四"></g-input>
+    <g-input value="张三" @change="inputChange" ></g-input>
+    <g-input value="李四" v-model="message"></g-input>
+    <p>{{message}}</p>
+    <button @click="message+=1">+1</button>
   </div>
   <div class="box">
     <g-input value="王五" disabled></g-input>
     <g-input value="林六" readonly></g-input>
   </div>
   <div class="box">
-    <g-input value="吴七" error="姓名不能少于两个字"></g-input>
+    <g-input value="吴" error="姓名不能少于两个字"></g-input>
   </div>
 
   <div class="box">

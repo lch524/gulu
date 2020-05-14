@@ -1,6 +1,11 @@
 <template>
 <div class="warpper" :class="{error}">
-    <input :value="value" type="text" :disabled="disabled" :readonly="readonly">
+    <input :value="value" type="text" :disabled="disabled" :readonly="readonly"
+           @change="$emit('change', $event.target.value)"
+           @input="$emit('input', $event.target.value)"
+           @focus="$emit('focus', $event.target.value)"
+           @blur="$emit('blur', $event.target.value)"
+    >
     <template v-if="error">
         <icon name="error" class="icon-error"></icon>
         <span class="errorMessage">{{error}}</span>
@@ -59,7 +64,7 @@ export default {
                 box-shadow: inset 0 1px 3px $box-shadow-color;
                 outline: none;
             }
-            &[disabled] , .warpper > input[readonly]{
+            &[disabled] , &[readonly]{
                 border-color: #bbbbbb;
                 color: #bbbbbb;
                 cursor: not-allowed;/*显示鼠标不可点击样式*/
