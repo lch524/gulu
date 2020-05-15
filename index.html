@@ -11,7 +11,7 @@
       box-sizing: border-box;
     }
 
-    :root { /*:root代表作用域，在这里可以改成html和.g-button*/
+    html { /*html代表作用域，在这里可以改成:root和.g-button*/
       --button-height: 32px;
       --font-size: 14px;
       --button-bg: white;
@@ -50,6 +50,7 @@
     <div class="toast">
         <button @click="showToast">按钮</button>
     </div>
+
 <!--
     <g-row class="topbar">
         <g-col class="demoBox" span="9">
@@ -78,9 +79,9 @@
             <g-col class="demoBox" span="14"></g-col>
             <g-col class="demoBox" span="6"></g-col>
     </g-row>
-    -->
 
-  <!--<div class="row-box">
+
+  <div class="row-box">
   <g-row gutter="20">
     <g-col>1</g-col>
     <g-col>2</g-col>
@@ -118,9 +119,9 @@
       <g-col span="6" offset="6">11</g-col>
       <g-col span="6" offset="2">11</g-col>
     </g-row>
-  </div>-->
+  </div>
 
-   <!--
+
   <div class="box">
     <g-input value="张三" @change="inputChange" ></g-input>
     <g-input value="李四" v-model="message"></g-input>
@@ -134,9 +135,9 @@
   <div class="box">
     <g-input value="吴" error="姓名不能少于两个字"></g-input>
   </div>
-    -->
 
-    <!--
+
+
   <div class="box">
   <g-button :loading="loading1" @click="loading1 = !loading1">
     按钮
@@ -152,9 +153,8 @@
     <g-button>更多</g-button>
     <g-button icon="right" icon-position="right">下一页</g-button>
   </g-button-group>
-  </div>
+  </div>-->
 </div>
--->
-  <script   src = './src/app.js'></script>
+<script src = './src/app.js'></script>
 </body>
 </html>
